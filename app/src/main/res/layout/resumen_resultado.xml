@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResumenResultado"
+    android:background="#f4e3ff">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblResumen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resumen de Matrícula"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblAlumnoResul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alumno: [Nombre del Alumno]"
+        app:layout_constraintTop_toBottomOf="@id/lblResumen"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblDniResul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DNI: [DNI del Alumno]"
+        app:layout_constraintTop_toBottomOf="@id/lblAlumnoResul"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblCarreraResul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Carrera: [Carrera del Alumno]"
+        app:layout_constraintTop_toBottomOf="@id/lblDniResul"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblPension"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PENSIÓN: [Monto de Pensión]"
+        app:layout_constraintTop_toBottomOf="@id/lblCarreraResul"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblDesc1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DESC 1: [Monto de Descuento 1]"
+        app:layout_constraintTop_toBottomOf="@id/lblPension"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblDesc2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DESC 2: [Monto de Descuento 2]"
+        app:layout_constraintTop_toBottomOf="@id/lblDesc1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblTotalDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="T. DESC TOTAL: [Total de Descuentos]"
+        app:layout_constraintTop_toBottomOf="@id/lblDesc2"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblTotalPagar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TOTAL: [Total a Pagar]"
+        app:layout_constraintTop_toBottomOf="@id/lblTotalDesc"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <ImageView
+        android:id="@+id/imgResumenMat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/resultado"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toBottomOf="@id/lblTotalPagar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_volver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="VOLVER"
+        app:layout_constraintTop_toBottomOf="@id/imgResumenMat"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp"
+        android:background="#c348d8"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

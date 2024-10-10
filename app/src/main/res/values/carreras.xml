@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="carreras_array">
+        <item>Computación e informática</item>
+        <item>Administración de redes y comunicaciones</item>
+        <item>Administración y sistemas</item>
+        <!-- Agrega más carreras si es necesario -->
+    </string-array>
+</resources>

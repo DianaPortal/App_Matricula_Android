@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="16dp"
+    android:background="#f4e3ff">
+
+        <!-- Título Matricula -->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/lblMatric"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MATRICULA"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbldni"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DNI"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/lblMatric"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="10dp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_dni"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/lbldni"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="10dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblalumno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ALUMNO"
+        app:layout_constraintTop_toBottomOf="@id/input_dni"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="10dp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_alumno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:textStyle="bold"
+
+        app:layout_constraintTop_toBottomOf="@id/lblalumno"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="10dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblcarrera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CARRERA"
+        app:layout_constraintTop_toBottomOf="@id/input_alumno"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="10dp" />
+
+    <Spinner
+        android:id="@+id/spinner_carrera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/lblcarrera"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="10dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lbldescuento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DESCUENTO"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@id/spinner_carrera"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="10dp" />
+
+    <RadioGroup
+        android:id="@+id/rg_descuento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/lbldescuento"
+        app:layout_constraintStart_toStartOf="parent"
+
+        android:layout_margin="10dp">
+
+        <RadioButton
+            android:id="@+id/rb_descuento_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5%" />
+
+        <RadioButton
+            android:id="@+id/rb_descuento_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10%" />
+
+        <RadioButton
+            android:id="@+id/rb_descuento_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12%" />
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_calcular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CALCULAR"
+        app:layout_constraintTop_toBottomOf="@id/rg_descuento"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:background="#c348d8"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/lblmontos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MONTOS"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/btn_calcular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+    <TableLayout
+        android:id="@+id/tabla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/lblmontos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:stretchColumns="*">
+
+
+        <TableRow  android:background="#e4c5ea">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PENSIÓN"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:padding="10dp"
+                />
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="DESC1"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:padding="10dp"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="DESC2"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:padding="10dp"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="T.DESC"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:padding="10dp"/>
+
+        </TableRow>
+
+        <TableRow>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_pension"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="-"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:padding="10dp"                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_desc1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="-"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:padding="10dp"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_desc2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="-"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:padding="10dp"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_total_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="-"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:padding="10dp"
+                />
+        </TableRow>
+
+        <TableRow
+            android:background="#e4c5ea"
+            >
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TOTAL:"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:padding="10dp"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_total_pagar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:padding="10dp"
+                />
+        </TableRow>
+    </TableLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_imprimir"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="IMPRIMIR"
+        app:layout_constraintTop_toBottomOf="@id/tabla"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:background="#c348d8"/>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
